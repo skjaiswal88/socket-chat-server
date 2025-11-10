@@ -78,3 +78,63 @@ Output from Terminal 2:
 
 
 Demo Link: https://www.loom.com/share/25c5c70b8e864561aeb4fa5344c1a4ee
+
+
+
+### ▶️ Run the Server
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/skjaiswal88/socket-chat-server.git
+   cd socket-chat-server
+Start the chat server:
+
+bash
+Copy code
+node server.js
+You should see:
+
+bash
+Copy code
+✅ Chat server running on port 4000
+Open two Command Prompt or PowerShell windows.
+
+💻 Terminal 1:
+bash
+Copy code
+telnet localhost 4000
+💻 Terminal 2:
+bash
+Copy code
+telnet localhost 4000
+When connected, you’ll see:
+bash
+Copy code
+Welcome! Please login using: LOGIN <username>
+🧠 Output from Terminal 1:
+bash
+Copy code
+Welcome! Please login using: LOGIN <username>
+LOGIN Naman
+OK
+INFO Yudi joined
+MSG Hi everyone!
+MSG Naman: Hi everyone!
+MSG Yudi: Hello Naman!
+🧠 Output from Terminal 2:
+bash
+Copy code
+Welcome! Please login using: LOGIN <username>
+LOGIN Yudi
+OK
+MSG Naman: Hi everyone!
+MSG Hello Naman!
+MSG Yudi: Hello Naman!
+WHO
+INFO Active users:
+USER Naman
+USER Yudi
+INFO Naman disconnected (idle timeout)
+🎥 Demo Link
+📎 Watch the demo video here:
+https://www.loom.com/share/25c5c70b8e864561aeb4fa5344c1a4ee
