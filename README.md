@@ -35,8 +35,7 @@ No frameworks, no HTTP, and no databases — just raw sockets.
     ```pgsql
     ✅ Chat server running on port 4000
 
-4. Open two Command Prompt or PowerShell windows.
-
+4. Open two Command Prompt or PowerShell windows:
 Terminal 1:
     ```bash
     telnet localhost 4000
