@@ -35,21 +35,21 @@ No frameworks, no HTTP, and no databases — just raw sockets.
     ```pgsql
     ✅ Chat server running on port 4000
 
-4. Open two Command Prompt or PowerShell windows:
-Terminal 1:
+4. Open one Command Prompt for Terminal 1:
     ```bash
     telnet localhost 4000
 
-Terminal 2:
+5. Open second Command Prompt for Terminal 2:
     ```bash
     telnet localhost 4000
 
 
-When connected, you’ll see:
+6. When connected, you’ll see:
     ```pgsql
     Welcome! Please login using: LOGIN <username>
 
-Output from Terminal 1: 
+7. Input/Output from Terminal 1: 
+    ```bash
     Welcome! Please login using: LOGIN <username>
     LOGIN Naman
     OK
@@ -58,7 +58,8 @@ Output from Terminal 1:
     MSG Naman: Hi everyone!
     MSG Yudi: Hello Naman!
 
-Output from Terminal 2: 
+8. Input/Output from Terminal 2: 
+    ```bash
     Welcome! Please login using: LOGIN <username>
     LOGIN Yudi
     OK
@@ -72,11 +73,8 @@ Output from Terminal 2:
     INFO Naman disconnected (idle timeout)
 
 
-
-
-
-
-Demo Link: https://www.loom.com/share/25c5c70b8e864561aeb4fa5344c1a4ee
+9. Demo Link: 
+    https://www.loom.com/share/25c5c70b8e864561aeb4fa5344c1a4ee
 
 
 
