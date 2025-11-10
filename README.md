@@ -1,33 +1,79 @@
-# 🗨️ Simple Socket Chat Server (Node.js)
+# 🗨️ Socket Chat Server (Node.js)
 
-A simple **TCP-based chat server** built using only Node.js’s standard library (`net` module).  
-It supports multiple clients chatting in real-time via Telnet or Netcat — no frameworks, no databases.
-
----
-
-## 🚀 Features
-
-✅ Multi-user TCP chat server  
-✅ Real-time message broadcasting  
-✅ User login with unique usernames  
-✅ Clean message format → `MSG <username>: <text>`  
-✅ WHO command → lists active users    
-✅ Idle timeout → auto-disconnect inactive users (60s)    
-✅ Compatible with **Telnet on Windows**  
+## 🎯 Goal
+A simple **TCP chat server** built using **Node.js (standard `net` module)**.  
+It allows multiple users to connect, log in, and chat with each other in real time.  
+No frameworks, no HTTP, and no databases — just raw sockets.
 
 ---
 
-## ⚙️ Setup & Run Instructions
+## ⚙️ How to Run the Server
 
-### 1️⃣ Prerequisites
-- Node.js installed (v16+)
-- Telnet enabled (on Windows):
-  1. Press **Win + R** → type `optionalfeatures`
-  2. Enable ✅ **Telnet Client**
-  3. Click **OK**
+### 🧩 Prerequisites
+- **Node.js** (v16 or higher)
+- **Telnet client** enabled (Windows users must enable it manually)
 
-### 2️⃣ Clone and Run
-```bash
-git clone https://github.com/<your-username>/socket-chat-server.git
-cd socket-chat-server
-node server.js
+### ✅ Enable Telnet on Windows
+1. Press **Win + R**, type `optionalfeatures`, and hit Enter.  
+2. Scroll down and enable ✅ **Telnet Client**.  
+3. Click OK and wait for installation.
+
+---
+
+### ▶️ Run the Server
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/skjaiswal88/socket-chat-server.git
+   cd socket-chat-server
+
+2. Start the chat server:
+    ```bash
+    node server.js
+
+3. You should see:
+    ```pgsql
+    ✅ Chat server running on port 4000
+
+4. Open two Command Prompt or PowerShell windows.
+
+Terminal 1:
+    ```bash
+    telnet localhost 4000
+
+Terminal 2:
+    ```bash
+    telnet localhost 4000
+
+
+When connected, you’ll see:
+    ```pgsql
+    Welcome! Please login using: LOGIN <username>
+
+Output from Terminal 1: 
+    Welcome! Please login using: LOGIN <username>
+    LOGIN Naman
+    OK
+    INFO Yudi joined
+    MSG Hi everyone!
+    MSG Naman: Hi everyone!
+    MSG Yudi: Hello Naman!
+
+Output from Terminal 2: 
+    Welcome! Please login using: LOGIN <username>
+    LOGIN Yudi
+    OK
+    MSG Naman: Hi everyone!
+    MSG Hello Naman!
+    MSG Yudi: Hello Namana!
+    WHO
+    INFO Active users:
+    USER Naman
+    USER Yudi
+    INFO Naman disconnected (idle timeout)
+
+
+
+
+
+
